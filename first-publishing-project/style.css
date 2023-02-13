@@ -1,0 +1,563 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+h1,
+h3 {
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: rgba(43, 41, 45, 1);
+}
+
+strong {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+
+/* landing */
+.landing {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  background-color: rgba(253, 222, 216, 1);
+}
+
+.landing-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-title {
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  margin-bottom: 24px;
+}
+
+.landing-intro {
+  font-size: 16px;
+  line-height: 1.375;
+  margin-bottom: 24px;
+}
+
+.landing-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-button .button:first-child {
+  margin-right: 8px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 48px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: -0.05em;
+  background-color: rgba(48, 64, 196, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.button.inverted {
+  background-color: rgba(255, 255, 255, 1);
+  color: rgba(48, 64, 196, 1);
+}
+
+/* 데스크탑 */
+@media screen and (min-width: 768px) {
+  .landing {
+    height: auto;
+  }
+
+  .landing-content {
+    padding: 120px 0;
+  }
+
+  .landing-title {
+    font-size: 70px;
+    line-height: 1.02857;
+    margin-bottom: 32px;
+  }
+
+  .landing-intro {
+    font-size: 22px;
+    line-height: 1.454545;
+    margin-bottom: 32px;
+  }
+
+  .button {
+    width: 160px;
+    height: 56px;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .landing-button .button:first-child {
+    margin-right: 16px;
+  }
+}
+
+/* service */
+
+.service {
+  background-color: rgba(244, 245, 247, 1);
+}
+
+.service-box {
+  width: auto;
+}
+
+.service-title {
+  font-size: 22px;
+  line-height: 1.363636;
+  letter-spacing: -0.04em;
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .service {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding: 80px 15px;
+  }
+
+  .service-box:first-child {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .service {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 80px 150px;
+  }
+
+  .service-title {
+    font-size: 26px;
+    line-height: 1.307692;
+    letter-spacing: -0.04em;
+  }
+
+  .service-box:first-child {
+    margin-right: 110px;
+  }
+
+  .service-intro {
+    font-size: 22px;
+    line-height: 1.454545;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Program Style */
+
+.program {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 80px 15px;
+}
+
+.program-strong {
+  display: inline-block;
+  color: rgba(0, 155, 77, 1);
+  margin-bottom: 8px;
+}
+
+.program-title {
+  font-size: 34px;
+  line-height: 1.058823;
+  letter-spacing: -0.03em;
+  margin-bottom: 24px;
+}
+
+.program-intro {
+  margin-bottom: 32px;
+}
+
+.program-neo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05),
+    inset 0px 1px 0px rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+  padding-top: 24px;
+  padding-bottom: 32px;
+  color: rgba(43, 41, 45, 1);
+}
+
+.program-neo:last-child {
+  margin: 0;
+}
+
+.program-neo img {
+  display: block;
+  width: 50%;
+  margin-bottom: 16px;
+}
+
+.program-neo h3 {
+  font-size: 18px;
+  line-height: 1.333333;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .program {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 250px;
+  }
+
+  .program-strong {
+    font-size: 22px;
+    line-height: 1.090909;
+    letter-spacing: -0.01em;
+    margin-bottom: 16px;
+  }
+
+  .program-title {
+    font-size: 56px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-bottom: 32px;
+  }
+
+  .program-intro {
+    font-size: 22px;
+    line-height: 1.4545454;
+    letter-spacing: -0.01em;
+    margin-bottom: 72px;
+  }
+
+  .program-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .program-neo {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+
+  .program-neo:hover {
+    background-color: rgba(49, 65, 197, 1);
+    color: rgba(255, 255, 255, 1);
+  }
+}
+
+/* Curricum */
+/* curricum 부분의 a tag부터 시작 */
+/* curricum grid ???? */
+
+.curricum {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 80px 15px;
+}
+
+.curricum-strong {
+  color: rgba(1, 137, 209, 1);
+  margin-bottom: 8px;
+}
+
+.curricum-title {
+  font-size: 34px;
+  line-height: 1.058823;
+  letter-spacing: -0.03em;
+  margin-bottom: 24px;
+}
+
+.curricum-intro {
+  margin-bottom: 32px;
+}
+
+.curricum-button {
+  margin-bottom: 48px;
+}
+
+.curricum-image img {
+  display: none;
+}
+
+.curricum-box-first.curricum-box{
+  margin-bottom: 40px;
+}
+
+.curricum-box-title {
+  display: inline;
+  font-size: 15px;
+  line-height: 1.466666;
+  letter-spacing: -0.01em;
+}
+
+.curricum-box-intro {
+  font-size: 15px;
+  line-height: 1.466666;
+  letter-spacing: -0.01em;
+}
+
+@media screen and (min-width: 768px) {
+  .curricum {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5.2fr 1fr;
+    padding : 96px 250px;
+  }
+
+  .curricum-strong {
+    font-size: 22px;
+    line-height: 1.090909;
+    margin-bottom: 16px;
+  }
+
+  .curricum-title {
+    font-size: 56px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-bottom: 32px;
+  }
+
+  .curricum-intro {
+    font-size: 22px;
+    line-height: 1.4545454;
+    letter-spacing: -0.01em;
+    margin-bottom : 72px; 
+  }
+
+  .button.curricum-button {
+    font-size: 18px;
+    line-height: 1.5555555;
+    margin-bottom: 66px;
+  }
+  
+  .curricum-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .curricum-image img {
+    display : block;
+    width : 425px;
+    height : auto;
+  }
+  
+  .curricum-box-first {
+    margin-bottom: 0;
+    margin-right : 30px;
+  }
+  
+  .curricum-box{
+    height : 100%;
+  } 
+}
+
+/* Banner Styling */
+/* input 태그 내 글씨 조절 */
+/* .banner-img img{
+  margin : 0 auto;
+ } 로 해도 이미지가 가운데로 */
+
+.banner {
+  display : grid;
+  grid-template-columns: 1fr;
+  background-color: rgba(242, 248, 250, 1);
+  padding: 65px 15px;
+  padding-bottom : 40px;
+}
+
+.banner-box{
+  display : flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-title {
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  margin-bottom: 16px;
+}
+
+.banner-img{
+  display : flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 41px;
+}
+
+.banner-img img{
+  width : 191.48px;
+  height : auto;
+}
+
+.banner-intro {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.banner-form {
+  margin-bottom: 8px;
+}
+
+.banner-form form input {
+  width: 290px;
+  height: 48px;
+  margin-bottom: 8px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  border : none;
+  border-radius: 2px;
+  padding : 12px 16px;
+}
+
+.button.banner-button {
+  width: 290px;
+  height: 48px;
+  border : 1px solid rgba(48, 64, 196, 1);
+  border-radius : 2px;
+}
+
+.banner-footer {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.538461;
+  color: rgba(123, 123, 126, 1);
+}
+
+.banner-terms {
+  color: rgba(48, 64, 196, 1);
+}
+
+@media screen and (min-width : 768px){
+  .banner{
+    display : grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding : 88px 150px;
+  }
+
+  .banner-box{
+    display: inline;
+  }
+
+  .banner-img{
+    text-align : center;
+    margin-bottom : 0;
+    margin-right : 113px;
+  }
+
+  .banner-img img{
+    width : 287px;
+    height : auto;
+  }
+
+  .banner-title{
+    font-size : 40px;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    margin-bottom: 16px;
+  }
+
+  .banner-intro{
+    font-size : 22px;
+    line-height: 1.45454545;
+    letter-spacing: -0.01em;
+    text-align :left;
+    margin-bottom: 24px;
+  }
+  
+  .banner-form{
+    margin-bottom : 4px;
+  }
+
+  .banner-form form input{
+    width : 362px;
+    height : 56px;
+    margin-bottom : 4px;
+    font-size : 18px;
+    line-height: 1.333333;
+    letter-spacing: -0.01em;
+    padding : 16px;
+  }
+
+  .button.banner-button{
+    display : inline-block;
+    width : 160px;
+    height : 54.58px;
+    font-weight: 700;
+    font-size : 18px;
+    line-height: 1.333333;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* footer css */
+.footer {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  background-color: rgba(255, 255, 255, 1);
+  padding: 24px 15px;
+}
+
+.footer-intro {
+  color: rgba(128, 127, 129, 1);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7142857;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer{
+    display : flex;
+    justify-content : flex-start;
+    align-items: center;
+    padding : 16px 255px;
+  }
+
+  .footer-intro {
+    margin-right: 16px;
+  }
+}
